@@ -1,9 +1,17 @@
 const express = require('express')
 //console.log(express)
 const app = express()//method
-const port = 3000
+const port = 4000
+const web =require('./routes/web')
 
-//route
-app.get(
-    
-)
+//html css views
+app.set('view engine','ejs')
+
+//route load
+app.use('/',web)
+
+
+
+
+  //server create
+  app.listen(port,()=>console.log("server start localhost:4000"))  
