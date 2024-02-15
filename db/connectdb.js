@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+const Live_URL ='mongodb+srv://nehamishra59098:neha1234@cluster0.ltoslr2.mongodb.net/admissionPortal?retryWrites=true&w=majority'
+const Local_URL='mongodb://127.0.0.1:27017/admission1234'
 
 const connectdb = () => {
-  return mongoose
-    .connect("mongodb://127.0.0.1:27017/admission1234")
+   mongoose.connect(Live_URL)
     .then(() => {
       console.log("connecting succes");
     })

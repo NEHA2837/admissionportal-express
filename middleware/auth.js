@@ -7,7 +7,7 @@ const checkuserAuth = async (req,res,next) =>{
     //console.log(token)
     if (!token){
         req.flash("error","unauthorized login")
-        req.redirect("/login")
+        req.redirect("/")
     } else {
         const data = jwt.verify(token, "nehasdfghjkertyuifghj")
         // data get

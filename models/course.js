@@ -34,6 +34,18 @@ const Courseschema = new mongoose.Schema(
             type: String,
             required: true,
         },
+        user_id: {
+            type: String,
+            Required: true,
+        },
+        status:{
+            type:String,
+            default:"panding",
+        },
+        comment:{
+            type:String,
+            default:"panding"
+        },
         
     },
     { timestamps: true }
